@@ -1,6 +1,6 @@
 * {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 body {
@@ -9,29 +9,44 @@ body {
   justify-content: center;
 }
 
-h1{
-    color: white;
+h1 {
+  color: white;
 }
 
 .timer {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  margin-top: 3vh;
+  text-align: center;
+  line-height: 3em;
 }
 
 button {
-    background-color: #232323;
-    color: white;
-    border: 1px solid white;
-    border-radius: 5px;
-    font-size: 20px;
-    height: 2.2em;
-    width: 5em;
-    margin: 8px;
+  background-color: #232323;
+  color: white;
+  border: 1px solid white;
+  border-radius: 5px;
+  font-size: 20px;
+  height: 2.2em;
+  width: 5em;
+  margin: 8px;
 }
 
 button:hover {
-    background-color: white;
-    color: #232323;
-    cursor: pointer;
+  background-color: white;
+  color: #232323;
+  cursor: pointer;
+}
+
+.btn-start:hover {
+  background-color: green;
+  color: white;
+}
+
+.btn-stop:hover {
+  background-color: gray;
+  color: white;
+}
+
+.btn-reset:hover {
+  background-color: red;
+  color: white;
 }
