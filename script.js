@@ -2,16 +2,29 @@ var sec = 0;
 var min = 0;
 var hrs = 0;
 
+var interval;
+
+function addZero(i) {
+  if (i < 10) {
+    i = "0" + i;
+  }
+  return i;
+}
+
 function start() {
-  setInterval(time, 1000);
+  interval = setInterval(time, 1000);
 }
 
 function stop() {
-  console.log("stop");
+  clearInterval(interval);
 }
 
 function reset() {
-  console.log("reset");
+  clearInterval(interval);
+  sec = 0;
+  min = 0;
+  hrs = 0;
+  document.getElementById("time").innerText = "00:00:00";
 }
 
 function time() {
@@ -24,5 +37,5 @@ function time() {
       hrs++;
     }
   }
-  document.getElementById("time").innerText = hrs + ":" + min + ":" + sec;
+  document.getElementById("time").innerText = addZero(hrs) + ":" + addZero(min) + ":" + addZero(sec);
 }
